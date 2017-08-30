@@ -7,6 +7,7 @@ public class Human : Mammal {
     {
         base.Start();
         Facebook();
+        //The human class has facebook as an action it is doing
     }
     void Facebook ()
     {

@@ -6,6 +6,7 @@ public class Mammal : Animal {
     public override void Start() {
         base.Start();
         LiveBirth();
+        //this is a mammal class that is attached to the animal class
     }
     void LiveBirth ()
     {
