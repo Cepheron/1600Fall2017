@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fish : Animal {
+public class Fish : Animal
+{
 
-    void Swim () {
+    void Swim()
+    {
         print(this.name + "Swims");
 
     }
-    void Start()
-    {
-        Swim ();
+    public override void Start() {
+        base.Start();
+        Swim();
     }
-
 }
