@@ -3,3 +3,5 @@ WEATHER
 NOW: 65 degrees
 
 HUMIDITY: 66%
+
+WIND: 18mph
