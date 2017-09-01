@@ -3,3 +3,5 @@ WEATHER
 NOW: 90 degrees
 
 HUMIDITY: 24%
+
+WIND: 11mph
