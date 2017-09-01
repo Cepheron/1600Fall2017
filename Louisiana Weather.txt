@@ -1,1 +1,7 @@
 WEATHER
+
+NOW: 87 degrees
+
+HUMIDITY: 66%
+
+WIND: 7mph
