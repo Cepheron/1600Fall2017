@@ -9,7 +9,7 @@ public class MyClass : MonoBehaviour {
     string myString = "Hello";
     int myInt = 5;
     void Start() {
-        print("Space");
+        print(myString);
     }
 	
 	// Update is called once per frame
