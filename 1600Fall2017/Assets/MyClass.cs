@@ -8,6 +8,12 @@ public class MyClass : MonoBehaviour {
 
     string myString = "Hello";
     int myInt = 5;
+    // These are variables
+    string thisString = "Strings";
+    float myFloat = 3.5;
+    //this is bad syntax
+    string String = "hello"
+}
     void Start() {
         print(myString);
     }
