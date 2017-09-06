@@ -13,7 +13,7 @@ public class MyClass : MonoBehaviour {
     float myFloat = 3.5;
     //this is bad syntax
     string String = "hello"
-}
+};
     void Start() {
         print(myString);
     }
