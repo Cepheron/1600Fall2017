@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class ifStatement : MonoBehaviour
+public class ifStatementEnhanced : MonoBehaviour
 {
 
     public int num1;
