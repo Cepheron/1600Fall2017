@@ -11,20 +11,21 @@ public class WeaponSwitch : MonoBehaviour {
         weapons.Add(_weapon.gameObject);
     }
 
-    public void MyWeaponSwitch (int i){
-		switch (weapons[i].name)
-		{
-			case "Missile":
-				print("Missile");
-				break;
+    public void MyWeaponSwitch(int i)
+    {
+        switch (weapons[i].name)
+        {
+            case "Missile":
+                print("Missile");
+                break;
 
-			case "Plasma":
-				print("Plasma");
-				break;
+            case "Plasma":
+                print("Plasma");
+                break;
 
-			default:
-				print("You have no other weapons.");
-				break;
-		}
-	}
+            default:
+                print("You have no other weapons.");
+                break;
+        }
+    }
 }
