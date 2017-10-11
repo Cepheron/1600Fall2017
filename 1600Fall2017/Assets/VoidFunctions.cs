@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine; 
  
 public class VoidFunctions : MonoBehaviour 
-{ 
+{
    public string[] companions = {"Annah", "Morte", "Dakkon"};
    public string[] Enemies = {"Ghoul", "Skeleton", "Zombie"}; 
    public int[] enemyCount = {1, 2, 2};
@@ -17,18 +17,18 @@ public class VoidFunctions : MonoBehaviour
    public string[] NPCs = {"Harmonium Officer", "Dustmen", "Zombie Worker"};
    public int[] npcsSpoken = {1, 3, 1};
 
-   public virtual void Start()
-   {               
-        for (int i = 0; i < companions.Length; i++) 
-        { 
-            Recruit(companions[i]); 
-        } 
-                 
-        for (int i = 0; i < Enemies.Length; i++) 
-        { 
-            Fight(Enemies[i], enemyCount[i]); 
-        } 
-                    
+    public virtual void Start()
+    {
+        for (int i = 0; i < companions.Length; i++)
+        {
+            Recruit(companions[i]);
+        }
+
+        for (int i = 0; i < Enemies.Length; i++)
+        {
+            Fight(Enemies[i], enemyCount[i]);
+        }
+                            
         for (int i = 0; i < boostItems.Length; i++) 
         { 
             Use(boostItems[i], boostCount[i]); 
@@ -55,7 +55,7 @@ public class VoidFunctions : MonoBehaviour
 	void Fight(string enemy, int amount) 
 	{
 		print(this.name + " encountered a " + enemy);
-		print(this.name + " killed " + amount + enemy);
+        print(this.name + " killed " + amount + " " + enemy);     
 	}
 	
 	void Use(string boost, int amount)
@@ -67,12 +67,12 @@ public class VoidFunctions : MonoBehaviour
 	void Find(string item, int amount)
 	{
 		print(this.name + " sees a " + item + " on the ground.");
-		print(this.name + " picked up " + amount + item);
+		print(this.name + " picked up " + amount + " " + item);
 	}
 	void Speaks(string NPC, int amount)
 	{
 		print(this.name + " gets the attention of a " + NPC);
-		print(this.name + " speaks to " + amount + NPC);
+		print(this.name + " speaks to " + amount + " " + NPC);
 	}
 	void Travels()
 	{
