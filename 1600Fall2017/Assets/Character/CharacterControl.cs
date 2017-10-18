@@ -14,9 +14,9 @@ public class CharacterControl : MonoBehaviour {
         moveVector3.y -= gravity * Time.deltaTime;
         if (characterController.isGrounded)
         {
-            if (Input.GetKey(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                moveVector3.y += jumpForce * Time.deltaTime;
+                moveVector3.y = jumpForce * Time.deltaTime;
             }            
             moveVector3.x = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
         }        
