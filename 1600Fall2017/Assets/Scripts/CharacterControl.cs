@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CharacterControl : MonoBehaviour
 {
-
     public CharacterController characterController;
     public static bool gameOver = false;
     public float gravity = 9.81f;
