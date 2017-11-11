@@ -9,6 +9,7 @@ public class UIBar : MonoBehaviour
     public GameObject gameOverUI;
     public float powerLevel = 0.1f;
     public float amountToAdd = 0.01f;
+    public GameObject playerExplosion;
     public enum PowerUpType
     {
         PowerUp,
@@ -27,7 +28,13 @@ public class UIBar : MonoBehaviour
             case PowerUpType.PowerDown:
                 StartCoroutine(PowerDownBar());
                 break;            
-        }        
+        }
+                if (bar.fillAmount == 0)        
+                {
+                    Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
+                    gameOverUI.SetActive(true);
+                    PlayerController.gameOver = false;
+                }     
     }
     
     IEnumerator PowerUpBar()
@@ -60,8 +67,8 @@ public class UIBar : MonoBehaviour
 
         }
 
-        if (bar.fillAmount == 0)
-        {
+        if (bar.fillAmount == 0)        {
+            
             gameOverUI.SetActive(true);
             PlayerController.gameOver = false;
         }

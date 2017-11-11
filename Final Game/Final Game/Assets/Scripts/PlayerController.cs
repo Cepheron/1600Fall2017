@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour {
     public Text score;
     public Text win;
     private int count; 
+    public GameObject gameOverUI;
 
     void Start ()
     {
@@ -37,8 +38,7 @@ public class PlayerController : MonoBehaviour {
     }	
 	void FixedUpdate () 
 	{
-		float moveHorizontal = Input.GetAxis("Horizontal");
-		float moveVertical = Input.GetAxis("Vertical");
+		float moveHorizontal = Input.GetAxis("Horizontal");		
 
 		Vector3 movement = new Vector3 (moveHorizontal, 0.0f, 0.0f);
 		GetComponent<Rigidbody>().velocity = movement * speed;	
@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour {
 		if(other.gameObject.CompareTag("Pickup")) 
 		{
 			other.gameObject.SetActive(false);
-			count = count + 10;
+			count = count + 20;
 			SetScore();
 		}
 	}
@@ -57,9 +57,10 @@ public class PlayerController : MonoBehaviour {
     void SetScore() 
 	{
 		score.text = "Score: " + count.ToString ();
-		if (count >= 12) 
+		if (count >= 300) 
 		{
 			win.text = "You win!";
+            gameOverUI.SetActive(true);
 		}
 	}
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ReplayGame : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class ReplayGame : MonoBehaviour
         PlayerController.gameOver = false;
         player.position = startPosition;
         uiBar.fillAmount = fillAmount;
-        GameOverUI.SetActive(false);       
+        GameOverUI.SetActive(false);
+        SceneManager.LoadScene (SceneManager.GetActiveScene().name);
     }	
 }
