@@ -32,8 +32,7 @@ public class UIBar : MonoBehaviour
                 if (bar.fillAmount == 0)        
                 {
                     Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
-                    gameOverUI.SetActive(true);
-                    PlayerController.gameOver = false;
+                    gameOverUI.SetActive(true);                   
                 }     
     }
     
@@ -70,7 +69,7 @@ public class UIBar : MonoBehaviour
         if (bar.fillAmount == 0)        {
             
             gameOverUI.SetActive(true);
-            PlayerController.gameOver = false;
+            PlayerController.gameOver = true;
         }
     }
 }

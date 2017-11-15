@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class PlayerController2D : MonoBehaviour 
 {
-	private Rigidbody2D rb2d;
+     private Rigidbody2D rb2d;
 	private int count;
 	public float speed;
 	public Text countText;
 	public Text winText;
-
+    public Vector2 moveVector2;
 	void Start () 
 	{
 		rb2d = GetComponent<Rigidbody2D> ();
@@ -18,12 +18,12 @@ public class PlayerController2D : MonoBehaviour
 		SetCountText ();
 		winText.text = "";
 		
-	}
-	void FixedUpdate () 
+	}    
+    void FixedUpdate () 
 	{
 		float moveHorizontal = Input.GetAxis ("Horizontal");
 		float moveVertical = Input.GetAxis ("Vertical");
-		Vector2 movement = new Vector2 (moveHorizontal, moveVertical); 
+		Vector2 movement = new Vector2 (moveHorizontal, 0.0f); 
 		rb2d.AddForce (movement * speed);
 	}
 
