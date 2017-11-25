@@ -32,7 +32,11 @@ public class UIBar : MonoBehaviour
                 if (bar.fillAmount == 0)        
                 {
                     Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
+<<<<<<< HEAD
                      PlayerController.gameOver = true;                   
+=======
+                    gameOverUI.SetActive(true);                   
+>>>>>>> master
                 }     
     }
     

@@ -36,7 +36,11 @@ public class PlayerController : MonoBehaviour {
         }
         characterController.Move(moveVector3);
     }	
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> master
     void OnTriggerEnter (Collider other) 
 	{
 		if(other.gameObject.CompareTag("Pickup")) 
