@@ -7,10 +7,15 @@ public class NavMeshAI : MonoBehaviour
 {
     public Transform player;
     public NavMeshAgent agent;
+    public GameObject gameOverUI;   
 
-    // Update is called once per frame
     void Update()
     {
-        agent.destination = player.position;
-    }
+        agent.destination = player.position; 
+        
+        if(PlayerController.gameOver)
+        {
+            agent.destination = transform.position;
+        }
+    }    
 }

@@ -33,14 +33,10 @@ public class PlayerController : MonoBehaviour {
                 moveVector3.y = jumpForce * Time.deltaTime;
             }
             moveVector3.x = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
-        }
+        }        
         characterController.Move(moveVector3);
     }	
-<<<<<<< HEAD
 
-=======
-	
->>>>>>> master
     void OnTriggerEnter (Collider other) 
 	{
 		if(other.gameObject.CompareTag("Pickup")) 
@@ -57,7 +53,8 @@ public class PlayerController : MonoBehaviour {
 		if (count >= 300) 
 		{
 			win.text = "You win!";
-            gameOverUI.SetActive(true);
+            gameOverUI.SetActive(true);           
+              
 		}
 	}
 }
