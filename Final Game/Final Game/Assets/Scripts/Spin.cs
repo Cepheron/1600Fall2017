@@ -6,6 +6,7 @@ public class Spin : MonoBehaviour
 {
 void Update () 
 	{
+        // makes the pickup object spin
 		transform.Rotate (new Vector3 (15, 30, 45) * Time.deltaTime);
 	}
 }

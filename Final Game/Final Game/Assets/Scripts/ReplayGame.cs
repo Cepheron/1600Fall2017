@@ -14,6 +14,7 @@ public class ReplayGame : MonoBehaviour
 
     void Start()
     {
+        // starts the function that makes game over false until health bar is empty
         startPosition = player.position;
         fillAmount = uiBar.fillAmount;
         GameOverUI.SetActive(false);
@@ -21,6 +22,7 @@ public class ReplayGame : MonoBehaviour
 
     public void Click ()
     {
+        // function that makes the replay button able to be clicked and restarts the scene upon the game over being active
         PlayerController.gameOver = false;
         player.position = startPosition;
         uiBar.fillAmount = fillAmount;
